@@ -1,7 +1,31 @@
-[123]
-[123]
-[123]
-[345]
-[566]
-[abc]
-[efc]
+123
+123
+123
+345
+566
+abc
+efc
+-rw-r--r--  1 yisheng  staff     28 Apr  6 06:04 res.txt
+-rw-r--r--  1 yisheng  staff    415 Apr  6 06:04 Makefile
+-rwxr-xr-x  1 yisheng  staff  49816 Apr  6 06:00 unit_test.o
+-rwxr-xr-x  1 yisheng  staff  50176 Apr  6 06:00 grepsort.o
+drwxr-xr-x  4 yisheng  staff    128 Apr  6 06:04 bin
+drwxr-xr-x  7 yisheng  staff    224 Apr  6 05:56 src
+total 224
+
+
+
+
+	cat Makefile |bin/grepsort >>  res.txt
+	echo "12345\n" | bin/unit_test 5
+	echo "abc\n123\nefc\n123\n123\n345\n566\0aaaafff" | bin/grepsort > res.txt && \
+	echo "abcde\n" | bin/unit_test 5 && \
+	gcc src/grepsort.c src/mem.c src/sort.c -o bin/grepsort
+	gcc src/mem_test.c src/mem.c -o bin/unit_test && \
+	ls -l | bin/grepsort >>  res.txt && \
+	rm -f bin/*
+all: bin test
+bin: clean
+clean:
+test: bin
+unit_test: bin

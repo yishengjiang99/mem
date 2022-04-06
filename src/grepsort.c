@@ -23,6 +23,6 @@ int main(int argc, char *argv[]) {
     return 1;
   }
   qqsort((void **)lineptr, 0, nlines - 1);
-  for (int i = 0; i < nlines; i++) printf("[%s]\n", lineptr[i]);
+  for (int i = 0; i < nlines; i++) printf("%s\n", lineptr[i]);
   return 0;
 }
