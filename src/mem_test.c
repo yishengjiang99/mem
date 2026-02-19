@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
   assert(astrlen("1234") == 4);
   assert(astrlen("") == 0);
   char *aaa = "abc";
-  char bbb[3];
+  char bbb[4];
   astrcp(aaa, bbb);
   assert(bbb[0] == 'a');
   char *linebig = alloc(5555);

@@ -5,6 +5,7 @@ clean:
 
 bin: clean
 	gcc src/mem_test.c src/mem.c -o bin/unit_test && \
+	gcc src/sort_test.c src/mem.c src/sort.c -o bin/sort_test && \
 	gcc src/grepsort.c src/mem.c src/sort.c -o bin/grepsort
 
 test: bin
@@ -14,4 +15,5 @@ test: bin
 
 unit_test: bin
 	echo "abcde\n" | bin/unit_test 5 && \
-	echo "12345\n" | bin/unit_test 5
+	echo "12345\n" | bin/unit_test 5 && \
+	bin/sort_test

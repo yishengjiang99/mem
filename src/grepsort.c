@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
     p = alloc(len + 1);
     if (p == NULL) return -1;
     p[len] = '\0';
-    astrcp(p, line);
+    astrcp(line, p);
     lineptr[nlines++] = p;
   }
   if (nlines < 0) {

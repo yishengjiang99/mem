@@ -26,7 +26,7 @@ int astrlen(char *str) {
 void astrcp(char *s, char *t) {
   int i;
   i = 0;
-  while ((s[i] = t[i]) != '\0') i++;
+  while ((t[i] = s[i]) != '\0') i++;
 }
 int agetline(char *line, int max) {
   int c, i;
