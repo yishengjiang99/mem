@@ -2,3 +2,4 @@ bin/grepsort
 bin/unit_test
 bin/sort_test
 res.txt
+_codeql_detected_source_root
